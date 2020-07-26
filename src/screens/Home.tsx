@@ -1,9 +1,16 @@
 import 'react-native-gesture-handler';
-import React, {PureComponent} from 'react';
-import {Text, Icon} from 'react-native-elements';
+import React, { PureComponent } from 'react';
+import { Icon } from 'react-native-elements';
 import ScreenTemplate from './ScreenTemplate';
+import Header from '../components/Header';
+import { NavigationDrawerProp } from 'react-navigation-drawer';
+import TabLayout from '../navigators/tobTabNavigator';
 
-export default class Home extends PureComponent {
+type Props = {
+  navigation: NavigationDrawerProp;
+};
+
+export default class Home extends PureComponent<Props> {
   static navigationOptions = {
     drawerLabel: 'Home',
     drawerIcon: () => (
@@ -14,13 +21,11 @@ export default class Home extends PureComponent {
   render() {
     return (
       <ScreenTemplate>
-        <Text>Home Screen</Text>
-        <Icon
-          name="close"
-          type="simple-line-icon"
-          color="#517fa4"
-          // style={[styles.icon, {tintColor: tintColor}]}
+        <Header
+          title="Expense Manager"
+          onPress={this.props.navigation.openDrawer}
         />
+        <TabLayout />
       </ScreenTemplate>
     );
   }

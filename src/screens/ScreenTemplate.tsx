@@ -1,13 +1,13 @@
-import React, {PureComponent} from 'react';
-import {View} from 'react-native';
-import {colors} from '../config/colors';
+import React, { PureComponent } from 'react';
+import { ScrollView, View, StyleSheet } from 'react-native';
+import { colors } from '../config/constants';
 
 export default class ScreenTemplate extends PureComponent {
   render() {
-    return (
-      <View style={{flex: 1, backgroundColor: colors.BLACK_700}}>
-        {this.props.children}
-      </View>
-    );
+    return <View style={styles.container}>{this.props.children}</View>;
   }
 }
+
+const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: colors.BLACK_300 },
+});

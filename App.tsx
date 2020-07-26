@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import {createAppContainer} from 'react-navigation';
 
 import store from './src/redux/store/store';
-import DrawerNavigator from './src/navigators/rootStackNavigator';
+import DrawerNavigator from './src/navigators/rootNavigator';
 
 const AppContainer = createAppContainer(DrawerNavigator);
 

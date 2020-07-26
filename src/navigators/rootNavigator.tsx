@@ -1,6 +1,7 @@
 import {createDrawerNavigator} from 'react-navigation-drawer';
-import Home from '../screens/Home';
 import CustomDrawer from '../components/CustomDrawer';
+import MainTabs from './tobTabNavigator';
+import Home from '../screens/Home';
 
 const DrawerNavigator = createDrawerNavigator(
   {
