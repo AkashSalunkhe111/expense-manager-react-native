@@ -14,7 +14,7 @@
     "@types/react-navigation": "^3.4.0",
     "@types/redux-logger": "^3.0.8",
     "eslint-plugin-no-inline-styles": "^1.0.5",
-    "moment": "^2.27.0",
+    "moment": "^2.29.4",
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-elements": "^2.0.2",
